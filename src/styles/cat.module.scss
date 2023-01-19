@@ -1,0 +1,180 @@
+.App {
+  margin: 15px;
+
+  h1 {
+    font-family: "Exo 2", sans-serif;
+    margin-top: 36px;
+    margin-bottom: 25px;
+    font-size: 36px;
+    font-weight: 200;
+    line-height: 44px;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 0px 1px 1px #000000;
+  }
+  .card_table {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: calc(100% - 160px);
+    margin: 0 80px;
+
+    section {
+      width: 320px;
+      margin-bottom: 10px;
+
+      .card_border {
+        padding: 4px;
+        width: 320px;
+        height: 480px;
+        -webkit-clip-path: polygon(10% 0, 100% 0%, 100% 100%, 0 100%, 0 7%);
+        clip-path: polygon(10% 0, 100% 0%, 100% 100%, 0 100%, 0 7%);
+        background: #2ea8e6;
+        border-radius: 12px;
+
+        .card {
+          position: relative;
+          margin: 0;
+          width: 100%;
+          height: 100%;
+          -webkit-clip-path: polygon(10% 0, 100% 0%, 100% 100%, 0 100%, 0 7%);
+          clip-path: polygon(10% 0, 100% 0%, 100% 100%, 0 100%, 0 7%);
+          background: #ffffff;
+          border-radius: 12px;
+          cursor: pointer;
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+            background-image: url(../../public/cat.png);
+            background-repeat: no-repeat;
+            background-position: top 210px right -20px;
+          }
+
+          .card_text {
+            padding-left: 48px;
+            padding-top: 21px;
+            font-family: "Trebuchet MS", sans-serif;
+
+            .name {
+              color: #666666;
+              font-style: normal;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 19px;
+            }
+
+            .title {
+              font-style: normal;
+              font-weight: 700;
+              font-size: 48px;
+              line-height: 56px;
+            }
+
+            .desc {
+              font-style: normal;
+              font-weight: 700;
+              font-size: 24px;
+              line-height: 28px;
+            }
+
+            .gift {
+              width: 50%;
+              margin-top: 15px;
+              color: #666666;
+              font-style: normal;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 16px;
+            }
+          }
+          .cycle {
+            position: absolute;
+            bottom: 16px;
+            right: 16px;
+            width: 80px;
+            height: 80px;
+            background-color: #1698d9;
+            border-radius: 50%;
+
+            div {
+              font-size: 16px;
+              color: #ffffff;
+              width: 60px;
+              text-align: center;
+              margin: auto;
+              padding-top: 20px;
+
+              span {
+                font-style: normal;
+                font-weight: 400;
+                font-size: 42px;
+                line-height: 22px;
+              }
+            }
+          }
+        }
+      }
+
+      p {
+        font-family: "Trebuchet MS";
+        color: #ffffff;
+        margin-top: 14px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 15px;
+        text-align: center;
+
+        div {
+          a {
+            color: #2ea8e6;
+            border-bottom: 1px dashed #2ea8e6;
+            text-decoration: none;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+.select {
+  background: #d91667 !important;
+}
+.disable_bg {
+  background: #b3b3b3 !important;
+}
+.disable_text {
+  color: #b3b3b3 !important;
+}
+.yellow {
+  color: #ffff66;
+}
+.red {
+  color: #e62e7a;
+}
+.red_bg {
+  background: #e62e7a !important;
+}
+.blue_bg {
+  background: #2ea8e6 !important;
+}
+.opacity {
+  &::before {
+    opacity: 0.5;
+  }
+}
+.none {
+  display: none;
+}
+
+@media screen and (max-width: 829px) {
+  .card_table {
+    justify-content: center !important;
+  }
+}
